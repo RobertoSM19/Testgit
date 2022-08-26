@@ -46,18 +46,18 @@ class BinaryTree{
       if (codigo<nodox.codigo){
         if(nodox.izquierdo==null){
           return null;
-        }else if (nodox.izquierdo==codigo){
+        }else if (nodox.izquierdo==codigo){  // es como si preguntaras si un alumno es 19.... cuando debieras preguntar si su edad es 19
           return nodox.izquierdo;
         }else{
-            this.buscarRec(codigo,nodox.izquierdo);
+            this.buscarRec(codigo,nodox.izquierdo);  //aqui te falta poner return....
         }
       }else{
         if(nodox.derecho==null){
           return null;
-        }else if(nodox.derecho==codigo){
+        }else if(nodox.derecho==codigo){  //nodox.derecho es un producto nodox.derecho.nombre es un dato, tu necesitas el código
           return nodox.derecho;
         }else{
-          this.buscarRec(codigo,nodox.derecho);
+          this.buscarRec(codigo,nodox.derecho);  //aqui te falta poner return.... para regresar lo que sea que regrese cuando halle algo
         }
       }
     }
