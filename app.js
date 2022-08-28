@@ -4,6 +4,7 @@ const btnPre=document.getElementById("btnPre");
 const btnPos=document.getElementById("btnPos");
 const btnIn=document.getElementById("btnIn");
 const btnFin=document.getElementById("btnFin");
+const btnDel=document.getElementById("btnDel");
 let res=document.getElementById("detalles");
 
 btnAdd.addEventListener('click',()=>{
@@ -21,15 +22,15 @@ btnAdd.addEventListener('click',()=>{
 });
 
 btnPre.addEventListener('click',()=>{
-    res.innerHTML+=`<p>${bi.preOrder()}</p><br>`;
+    res.innerHTML+=`<p>${bi.preOrder()}</p>`;
 });
 
 btnPos.addEventListener('click',()=>{
-    res.innerHTML+=`<p>${bi.postOrder()}</p><br>`;
+    res.innerHTML+=`<p>${bi.postOrder()}</p>`;
 });
 
 btnIn.addEventListener('click',()=>{
-    res.innerHTML+=`<p>${bi.inOrder()}</p><br>`;
+    res.innerHTML+=`<p>${bi.inOrder()}</p>`;
 });
 
 btnFin.addEventListener('click',()=>{
@@ -40,4 +41,8 @@ btnFin.addEventListener('click',()=>{
     } else{
         return res.innerHTML+=`<p>El producto tiene el nombre: ${prod.nombre}</p>`;
     }
+});
+
+btnDel.addEventListener('click',()=>{
+    res.innerHTML="<p></p>";
 });

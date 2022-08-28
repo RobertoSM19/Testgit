@@ -46,18 +46,18 @@ class BinaryTree{
       if (codigo<nodox.codigo){
         if(nodox.izquierdo==null){
           return null;
-        }else if (nodox.izquierdo==codigo){
+        }else if (nodox.izquierdo.codigo==codigo){
           return nodox.izquierdo;
         }else{
-            this.buscarRec(codigo,nodox.izquierdo);
+            return this.buscarRec(codigo,nodox.izquierdo);
         }
       }else{
         if(nodox.derecho==null){
           return null;
-        }else if(nodox.derecho==codigo){
+        }else if(nodox.derecho.codigo==codigo){
           return nodox.derecho;
         }else{
-          this.buscarRec(codigo,nodox.derecho);
+          return this.buscarRec(codigo,nodox.derecho);
         }
       }
     }
